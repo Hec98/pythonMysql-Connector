@@ -16,7 +16,7 @@ print(consulta)
 '''
 
 ''' Select
-ursor.execute('select * from Usuario')
+cursor.execute('select * from Usuario')
 resultado = cursor.fetchone()
 resultado = cursor.fetchall()
 print(resultado)
