@@ -12,13 +12,14 @@ cursor = miDb.cursor()
 def dataBaseStructure():
     cursor.execute('SHOW CREATE TABLE Usuario')
     consulta = cursor.fetchall()
-    print(consulta)
+    for c in consulta: 
+        for y in c: print(y)
 
 def selectDataBase():
     cursor.execute('SELECT * FROM Usuario')
     # resultado = cursor.fetchone()
     resultado = cursor.fetchall()
-    print(resultado)
+    for r in resultado: print(r)
 
 def selectLimit(limit):
     sql = 'SELECT * FROM Usuario LIMIT %s' 
@@ -26,20 +27,20 @@ def selectLimit(limit):
     cursor.execute(sql, values)
     # resultado = cursor.fetchone()
     resultado = cursor.fetchall()
-    print(resultado)
+    for r in resultado: print(r)
 
-def insertData(user, email, edad):
+def insertData(user, email, age):
     sql = 'INSERT INTO Usuario (username, email, edad) VALUES (%s, %s, %s)'
-    values = (user, email, edad)
+    values = (user, email, age)
     cursor.execute(sql, values)
     miDb.commit()
     if(cursor.rowcount == 1): print('Update query made')
     else: print('Update query not done')
 
-def updateData(idx, user, email, edad):
+def updateData(idx, user, email, age):
     # UPDATE `prueba`.`Usuario` SET `username` = 'user1x', `email` = 'correoXx@gmail.com', `edad` = '19' WHERE (`id` = '1')
     sql = 'UPDATE Usuario SET username = %s, email = %s, edad = %s WHERE id = %s'
-    values = (user, email, edad, idx)
+    values = (user, email, age, idx)
     cursor.execute(sql, values)
     miDb.commit()
     if(cursor.rowcount == 1): print('Update query made')
