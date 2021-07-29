@@ -8,8 +8,24 @@ miDb = mysql.connect(
 )
 
 cursor = miDb.cursor()
-cursor.execute('select * from Usuario')
 
+''' Query database structure
+cursor.execute('SHOW CREATE TABLE Usuario')
+consulta = cursor.fetchall()
+print(consulta)
+'''
+
+''' Select
+ursor.execute('select * from Usuario')
+resultado = cursor.fetchone()
 resultado = cursor.fetchall()
-
 print(resultado)
+'''
+# Inser data
+sql = 'INSERT INTO Usuario (username, email, edad) VALUES (%s, %s, %s)'
+values = ('correoX', 'email@gmail.com', 21)
+
+cursor.execute(sql, values)
+miDb.commit()
+print(cursor.rowcount)
+
