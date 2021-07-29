@@ -38,7 +38,6 @@ def insertData(user, email, age):
     else: print('Update query not done')
 
 def updateData(idx, user, email, age):
-    # UPDATE `prueba`.`Usuario` SET `username` = 'user1x', `email` = 'correoXx@gmail.com', `edad` = '19' WHERE (`id` = '1')
     sql = 'UPDATE Usuario SET username = %s, email = %s, edad = %s WHERE id = %s'
     values = (user, email, age, idx)
     cursor.execute(sql, values)
