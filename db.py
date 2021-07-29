@@ -15,8 +15,8 @@ consulta = cursor.fetchall()
 print(consulta)
 '''
 ''' Select
-cursor.execute('select * from Usuario')
-resultado = cursor.fetchone()
+cursor.execute('SELECT * FROM Usuario')
+# resultado = cursor.fetchone()
 resultado = cursor.fetchall()
 print(resultado)
 '''
@@ -36,9 +36,16 @@ if(cursor.rowcount == 1): print('Update query made')
 else: print('Update query not done')
 '''
 # Delete data
+'''
 sql = 'DELETE FROM Usuario WHERE id = %s'
 values = (3,)
 cursor.execute(sql, values)
 miDb.commit()
 if(cursor.rowcount == 1): print('Delete query made')
 else: print('Delete query not done')
+'''
+
+cursor.execute('SELECT * FROM Usuario LIMIT 1')
+# resultado = cursor.fetchone()
+resultado = cursor.fetchall()
+print(resultado)
