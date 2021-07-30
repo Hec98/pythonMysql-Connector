@@ -20,8 +20,8 @@ CREATE TABLE `Usuario` (
   `username` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `age` int(3) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-));
+   PRIMARY KEY (`id`)
+);
 ```
 * Insert data
 ```sql
