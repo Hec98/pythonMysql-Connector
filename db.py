@@ -30,7 +30,7 @@ def selectLimit(limit):
     for r in resultado: print(r)
 
 def insertData(user, email, age):
-    sql = 'INSERT INTO Usuario (username, email, edad) VALUES (%s, %s, %s)'
+    sql = 'INSERT INTO Usuario (username, email, age) VALUES (%s, %s, %s)'
     values = (user, email, age)
     cursor.execute(sql, values)
     miDb.commit()
@@ -38,7 +38,7 @@ def insertData(user, email, age):
     else: print('Update query not done')
 
 def updateData(idx, user, email, age):
-    sql = 'UPDATE Usuario SET username = %s, email = %s, edad = %s WHERE id = %s'
+    sql = 'UPDATE Usuario SET username = %s, email = %s, age = %s WHERE id = %s'
     values = (user, email, age, idx)
     cursor.execute(sql, values)
     miDb.commit()
