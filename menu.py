@@ -3,8 +3,8 @@
 from simple_term_menu import TerminalMenu
 import time
 
-def pausa(t = 1): 
-    if(t == 0): input('Press a key to continue ')
+def pausa(t = 2): 
+    if(t == 0): input('Press ENTER to continue ')
     else: time.sleep(t)
 
 def menu(title, items):
