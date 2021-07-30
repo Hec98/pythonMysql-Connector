@@ -19,13 +19,13 @@ CREATE TABLE `Usuario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `edad` int(3) DEFAULT NULL,
+  `age` int(3) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ));
 ```
 * Insert data
 ```sql
-INSERT INTO Usuario (username, email, edad)
+INSERT INTO Usuario (username, email, age)
   VALUES('user', 'correo@gmail.com', 18);
 ```
 * Select
