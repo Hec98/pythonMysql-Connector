@@ -6,6 +6,9 @@ pip install mysql-connector-python
 ```ssh
 pip install simple-term-menu
 ```
+![Screenshot-at-2021-07-29-22-32-20.png](https://i.postimg.cc/ZR50Kf8X/Screenshot-at-2021-07-29-22-32-20.png)
+![Screenshot-at-2021-07-29-22-40-49.png](https://i.postimg.cc/sxBX5v0c/Screenshot-at-2021-07-29-22-40-49.png)
+![Screenshot-at-2021-07-29-22-45-20.png](https://i.postimg.cc/TwN1yrQ1/Screenshot-at-2021-07-29-22-45-20.png)
 * Create database
 ```sql
 CREATE DATABASE prueba;
