@@ -1,7 +1,10 @@
 ## Python - mysql connector
-Install mysql-connector-python
+Necessary libraries
 ```
 pip install mysql-connector-python
+```
+```ssh
+pip install simple-term-menu
 ```
 * Create database
 ```sql
