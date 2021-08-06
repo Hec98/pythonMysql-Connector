@@ -7,7 +7,7 @@ miDb = mysql.connect(
     database = 'prueba'
 )
 
-cursor = miDb.cursor()
+cursor = miDb.cursor(dictionary = True)
 
 def dataBaseStructure():
     cursor.execute('SHOW CREATE TABLE Usuario')
