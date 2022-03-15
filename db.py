@@ -2,7 +2,7 @@ import mysql.connector as mysql
 
 miDb = mysql.connect(
     host = 'localhost',
-    user = 'root',
+    user = 'hecdelatorre',
     password = 'toor',
     database = 'prueba'
 )

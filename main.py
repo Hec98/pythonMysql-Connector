@@ -3,13 +3,7 @@ from db import dataBaseStructure, selectDataBase, selectLimit, insertData, updat
 
 def main():
     title = "Menu"
-    items = ["1 Database Structure", 
-             "2 Select database", 
-             "3 Select database limit", 
-             "4 Insert data", 
-             "5 Update data", 
-             "6 Delete data", 
-             "Exit"]
+    items = "1 Database Structure,\n2 Select database,\n3 Select database limit,\n4 Insert data,\n5 Update data,\n6 Delete data,\n7 Exit\n"
 
     repeat = True
     while repeat:
@@ -47,7 +41,7 @@ def main():
             deleteData(idx)
             pausa()
     
-        repeat = (opc < len(items))
+        repeat = (opc < 7)
 
 if __name__ == "__main__":
     main()
